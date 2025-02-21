@@ -1,5 +1,5 @@
 import express, { Request, Response, Router } from 'express';
-import Person from '../Model/person.ts';
+import Person from '../models/User.ts';
 
 const router: Router = express.Router();
 
