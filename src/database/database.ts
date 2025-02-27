@@ -2,9 +2,8 @@ import mongoose from 'mongoose';
 import config from 'config'
 
 const connectDB = async () => {
-    
     try {
-        const db =  process.env.db_string || ""
+        const db: string = config.get('db');
         await mongoose.connect(db);
         console.log('MongoDB Connected');
     } catch (error) {
